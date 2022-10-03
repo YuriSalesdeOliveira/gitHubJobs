@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     *, button, input {
+        outline: none;
         border: 0;
         background: none;
         font-family: 'Roboto', sans-serif;
@@ -20,6 +21,13 @@ export const GlobalStyle = createGlobalStyle`
     ul {
         list-style: none;
     }
+
+    :root {
+        --color-light: #ffffff;
+        --color-primary: #334680;
+        --color-gray: #b9bdcf;
+        --color-highlight: #1e86ff;
+    }
 `;
 
 export const Wrapper = css`
@@ -28,6 +36,6 @@ export const Wrapper = css`
     margin-right: auto;
 
     @media (max-width: 1200px) {
-        width: 100%;
+        width: 95%;
     }
 `;

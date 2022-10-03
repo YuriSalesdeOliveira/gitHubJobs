@@ -1,9 +1,15 @@
 import { Container, Title } from "./style";
 
-export function Header() {
+type HeaderProps = {
+    children?: JSX.Element
+}
+
+export function Header(props: HeaderProps) {
     return (
         <Container>
             <Title>Github <span>Jobs</span></Title>
+
+            {props.children ? props.children : null}
         </Container>
     );
 }
