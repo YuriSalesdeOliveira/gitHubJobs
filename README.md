@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/54549125/151983025-5a387ed8-d301-4aa4-ade8-15e7decf3e45.gif" width="400">
+  <img src="https://user-images.githubusercontent.com/54549125/193929328-cda333cf-ed40-43ab-9bf8-48d15e75791c.png" width="400">
 </p>
 
 # myFirstGame
 
-Projeto obtido no site [devchallenges](https://devchallenges.io) desenvolvimentoveja o desafio no [link](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps)
+Projeto obtido no site [devchallenges](https://devchallenges.io) desenvolvimento em andamento veja o desafio no [link](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps)
