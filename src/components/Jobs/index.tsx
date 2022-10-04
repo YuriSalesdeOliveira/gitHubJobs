@@ -1,6 +1,22 @@
 import { Checkbox } from "../Checkbox";
 import { InputSearch } from "../InputSearch";
-import { Aside, Container, Title } from "./style";
+import jobImage from "../../assets/images/job.webp";
+import {
+    Aside,
+    Container,
+    Job,
+    JobBottom,
+    JobBottomRight,
+    JobCity,
+    JobCreatedAt,
+    JobDescription,
+    JobsList,
+    JobTag,
+    PlanetIcon,
+    Title,
+    WatchIcon
+} from "./style";
+import { Link } from "react-router-dom";
 
 export function Jobs() {
 
@@ -19,25 +35,38 @@ export function Jobs() {
                     name="search_city"
                     placeholder="City, state, zip code or country"
                     button={false} />
+
+                {/* <CitiesList>
+
+                </CitiesList> */}
+
             </Aside>
 
-            {/* <JobsList>
-                <Job>
-                    <Image />
-                    <Author>Kasisto</Author>
-                    <JobTitle>Front-End Software Engineer</JobTitle>
-                    <Tag name="Full time" />
-                    <City>
-                        <Icon />
-                        New York
-                    </City>
-                    <CreatedAt>
-                        <Icon />
-                        5 days ago
-                    </CreatedAt>
-                </Job>
-                <Paginator></Paginator>
-            </JobsList> */}
+            <JobsList>
+                <Link to="/job/33282">
+                    <Job>
+                        <img src={jobImage} />
+
+                        <JobDescription>
+                            <span>Kasisto</span>
+                            <h3>Front-End Software Engineer</h3>
+                            <JobBottom>
+                                <JobTag>Full time</JobTag>
+                                <JobBottomRight>
+                                    <JobCity>
+                                        <PlanetIcon />
+                                        New York
+                                    </JobCity>
+                                    <JobCreatedAt>
+                                        <WatchIcon />
+                                        5 days ago
+                                    </JobCreatedAt>
+                                </JobBottomRight>
+                            </JobBottom>
+                        </JobDescription>
+                    </Job>
+                </Link>
+            </JobsList>
 
         </Container>
     );

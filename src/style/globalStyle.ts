@@ -14,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     body {
         background-color: #f6f7fb;
     }
@@ -25,6 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     :root {
         --color-light: #ffffff;
         --color-primary: #334680;
+        --color-primary01: #4e68ba;
         --color-gray: #b9bdcf;
         --color-highlight: #1e86ff;
     }
