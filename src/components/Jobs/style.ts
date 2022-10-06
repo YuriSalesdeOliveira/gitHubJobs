@@ -22,6 +22,10 @@ export const Title = styled.h3`
     color: var(--color-gray);
 `;
 
+export const CitiesList = styled.div`
+    margin-top: 30px;
+`;
+
 export const JobsList = styled.div`
 
 `;

@@ -1,8 +1,9 @@
 import { Checkbox } from "../Checkbox";
 import { InputSearch } from "../InputSearch";
-import { Aside, Container, JobsList, Title } from "./style";
+import { Aside, CitiesList, Container, JobsList, Title } from "./style";
 import { Job } from "../Job";
 import jobImage from "../../assets/images/job.webp";
+import { Radio } from "../Radio";
 
 export function Jobs() {
 
@@ -10,6 +11,7 @@ export function Jobs() {
         <Container>
 
             <Aside>
+                
                 <Checkbox label="Full time" name="full_time" />
 
                 <Title>Location</Title>
@@ -22,13 +24,17 @@ export function Jobs() {
                     placeholder="City, state, zip code or country"
                     button={false} />
 
-                {/* <CitiesList>
-
-                </CitiesList> */}
+                <CitiesList>
+                    <Radio label="London" name="city[]" value="00990" />
+                    <Radio label="Amsterdam" name="city[]" value="00990" />
+                    <Radio label="New York" name="city[]" value="00990" />
+                    <Radio label="Berlin" name="city[]" value="00990" />
+                </CitiesList>
 
             </Aside>
 
             <JobsList>
+
                 <Job
                     image={jobImage}
                     author="Kasisto"
@@ -36,6 +42,31 @@ export function Jobs() {
                     tag="Full time"
                     city="New York"
                     createdAt="5 days ago" />
+
+                <Job
+                    image={jobImage}
+                    author="Kasisto"
+                    title="Front-End Software Engineer"
+                    tag="Full time"
+                    city="New York"
+                    createdAt="5 days ago" />
+
+                <Job
+                    image={jobImage}
+                    author="Kasisto"
+                    title="Front-End Software Engineer"
+                    tag="Full time"
+                    city="New York"
+                    createdAt="5 days ago" />
+
+                <Job
+                    image={jobImage}
+                    author="Kasisto"
+                    title="Front-End Software Engineer"
+                    tag="Full time"
+                    city="New York"
+                    createdAt="5 days ago" />
+
             </JobsList>
 
         </Container>

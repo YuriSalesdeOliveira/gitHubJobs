@@ -1,6 +1,16 @@
 import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+    
+    :root {
+        --color-background: #f6f7fb;
+        --color-light: #ffffff;
+        --color-primary: #334680;
+        --color-primary01: #4e68ba;
+        --color-gray: #b9bdcf;
+        --color-highlight: #1e86ff;
+    }
+    
     * {
         margin: 0;
         padding: 0;
@@ -19,19 +29,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: #f6f7fb;
+        background-color: var(--color-background);
     }
 
     ul {
         list-style: none;
-    }
-
-    :root {
-        --color-light: #ffffff;
-        --color-primary: #334680;
-        --color-primary01: #4e68ba;
-        --color-gray: #b9bdcf;
-        --color-highlight: #1e86ff;
     }
 `;
 

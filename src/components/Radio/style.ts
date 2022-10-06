@@ -1,6 +1,8 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
+
+    margin-bottom: 15px;
 
     label {
         cursor: pointer;
@@ -15,16 +17,17 @@ export const Container = styled.div`
             width: 18px;
             height: 18px;
             margin-right: 10px;
+            padding: 2px;
             -moz-appearance:none;
             -webkit-appearance:none;
             -o-appearance:none;
-            border: 1px solid var(--color-gray);
-            border-radius: 2px;
+            border: 2px solid var(--color-background);
+            box-shadow: 0 0 1px 1px var(--color-primary);
+            border-radius: 50%;
 
             &:checked {
                 background-color: var(--color-primary);
             }
         }
     }
-
 `;
