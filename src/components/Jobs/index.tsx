@@ -11,7 +11,6 @@ export function Jobs() {
         <Container>
 
             <Aside>
-                
                 <Checkbox label="Full time" name="full_time" />
 
                 <Title>Location</Title>
@@ -30,11 +29,9 @@ export function Jobs() {
                     <Radio label="New York" name="city[]" value="00990" />
                     <Radio label="Berlin" name="city[]" value="00990" />
                 </CitiesList>
-
             </Aside>
 
             <JobsList>
-
                 <Job
                     image={jobImage}
                     author="Kasisto"
@@ -66,7 +63,6 @@ export function Jobs() {
                     tag="Full time"
                     city="New York"
                     createdAt="5 days ago" />
-
             </JobsList>
 
         </Container>
