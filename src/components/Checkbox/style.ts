@@ -18,7 +18,8 @@ export const Container = styled.div`
             -moz-appearance:none;
             -webkit-appearance:none;
             -o-appearance:none;
-            border: 1px solid var(--color-gray);
+            border: 2px solid var(--color-background);
+            box-shadow: 0 0 1px 1px var(--color-primary);
             border-radius: 2px;
 
             &:checked {
