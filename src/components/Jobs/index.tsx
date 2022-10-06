@@ -1,22 +1,8 @@
 import { Checkbox } from "../Checkbox";
 import { InputSearch } from "../InputSearch";
+import { Aside, Container, JobsList, Title } from "./style";
+import { Job } from "../Job";
 import jobImage from "../../assets/images/job.webp";
-import {
-    Aside,
-    Container,
-    Job,
-    JobBottom,
-    JobBottomRight,
-    JobCity,
-    JobCreatedAt,
-    JobDescription,
-    JobsList,
-    JobTag,
-    PlanetIcon,
-    Title,
-    WatchIcon
-} from "./style";
-import { Link } from "react-router-dom";
 
 export function Jobs() {
 
@@ -43,29 +29,13 @@ export function Jobs() {
             </Aside>
 
             <JobsList>
-                <Link to="/job/33282">
-                    <Job>
-                        <img src={jobImage} />
-
-                        <JobDescription>
-                            <span>Kasisto</span>
-                            <h3>Front-End Software Engineer</h3>
-                            <JobBottom>
-                                <JobTag>Full time</JobTag>
-                                <JobBottomRight>
-                                    <JobCity>
-                                        <PlanetIcon />
-                                        New York
-                                    </JobCity>
-                                    <JobCreatedAt>
-                                        <WatchIcon />
-                                        5 days ago
-                                    </JobCreatedAt>
-                                </JobBottomRight>
-                            </JobBottom>
-                        </JobDescription>
-                    </Job>
-                </Link>
+                <Job
+                    image={jobImage}
+                    author="Kasisto"
+                    title="Front-End Software Engineer"
+                    tag="Full time"
+                    city="New York"
+                    createdAt="5 days ago" />
             </JobsList>
 
         </Container>
