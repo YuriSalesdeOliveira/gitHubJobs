@@ -4,6 +4,7 @@ import { Aside, CitiesList, Container, JobsList, Title } from "./style";
 import { Job } from "../Job";
 import jobImage from "../../assets/images/job.webp";
 import { Radio } from "../Radio";
+import { Link } from "react-router-dom";
 
 export function Jobs() {
 
@@ -32,14 +33,15 @@ export function Jobs() {
             </Aside>
 
             <JobsList>
-                <Job
-                    image={jobImage}
-                    author="Kasisto"
-                    title="Front-End Software Engineer"
-                    tag="Full time"
-                    city="New York"
-                    createdAt="5 days ago" />
-
+                <Link to="/tabalho/00990">
+                    <Job
+                        image={jobImage}
+                        author="Kasisto"
+                        title="Front-End Software Engineer"
+                        tag="Full time"
+                        city="New York"
+                        createdAt="5 days ago" />
+                </Link>
                 <Job
                     image={jobImage}
                     author="Kasisto"

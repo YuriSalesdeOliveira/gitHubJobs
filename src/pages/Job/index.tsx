@@ -1,3 +1,12 @@
+import { Footer } from "../../components/Footer";
+import { Header } from "../../components/Header";
+
 export function Job() {
-    return <h1>job</h1>
+    return (
+        <>
+            <Header />
+
+            <Footer />
+        </>
+    );
 }

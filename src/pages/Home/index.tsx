@@ -3,6 +3,7 @@ import { Search } from "./style";
 import backgroundImage from "../../assets/images/search.png";
 import { InputSearch } from "../../components/InputSearch";
 import { Jobs } from "../../components/Jobs";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
     return (
@@ -20,6 +21,8 @@ export function Home() {
             </Header>
 
             <Jobs />
+
+            <Footer />
         </>
     );
 }
