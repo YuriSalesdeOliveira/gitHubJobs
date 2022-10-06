@@ -11,6 +11,7 @@ export const Search = styled.section<SearchProps>`
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    padding: 0 20px;
     border-radius: 8px;
     background: url(${props => props.backgroundImage}) center no-repeat;
 `;
