@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Container, Title } from "./style";
 
 type HeaderProps = {
@@ -7,7 +8,9 @@ type HeaderProps = {
 export function Header(props: HeaderProps) {
     return (
         <Container>
-            <Title>Github <span>Jobs</span></Title>
+            <Link to="/">
+                <Title>Github <span>Jobs</span></Title>
+            </Link>
 
             {props.children ? props.children : null}
         </Container>
