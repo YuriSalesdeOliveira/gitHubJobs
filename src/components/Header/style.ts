@@ -7,6 +7,7 @@ export const Container = styled.header`
 `;
 
 export const Title = styled.h1`
+    user-select: none;
     font-weight: 700;
     font-size: 24px;
     color: #282538;

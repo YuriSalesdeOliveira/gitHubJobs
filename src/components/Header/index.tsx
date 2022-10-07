@@ -8,9 +8,7 @@ type HeaderProps = {
 export function Header(props: HeaderProps) {
     return (
         <Container>
-            <Link to="/">
-                <Title>Github <span>Jobs</span></Title>
-            </Link>
+            <Title>Github <span>Jobs</span></Title>
 
             {props.children ? props.children : null}
         </Container>
