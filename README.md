@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/54549125/194205190-ebb0162f-2a01-4bdb-aef6-5b484917279a.png" width="400">
+  <img src="https://user-images.githubusercontent.com/54549125/194464422-be7f3daa-47bb-460e-8ceb-8f5b1a83f420.gif">
 </p>
 
 # gitHubJobs
