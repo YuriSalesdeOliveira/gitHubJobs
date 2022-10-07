@@ -58,6 +58,7 @@ export const Bottom = styled.div`
 `;
 
 export const Tag = styled.span`
+    user-select: none;
     padding: 5px;
     font-weight: 700;
     font-size: 12px;
