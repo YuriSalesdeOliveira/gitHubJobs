@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import API from "../../services/API";
+import { DateUtils } from "../../utils/DateUtils";
 import { About, ArrowLeftIcon, Article, Aside, BackPageButton, City, Container, CreatedAt, Description, Main, PlanetIcon, Tag, Title, TitleContainer, Warning, WatchIcon } from "./style";
 
 type Job = {
@@ -17,14 +18,21 @@ type Job = {
 export function Job() {
 
     const { identity } = useParams<string>();
-    const [job, setJob] = useState<Job>();
+    const [job, setJob] = useState<Job>({
+        image: '',
+        author: '',
+        title: '',
+        tagCollection: [],
+        city: '',
+        createdAt: ''
+    } as Job);
 
     useEffect(() => {
         const listJob = async () => {
 
-            const job = await API.getJobByIdentity(Number(identity));
+            const job = await API.getJobByIdentity(String(identity));
 
-            setJob(job);
+            setJob(job[0]);
         }
 
         listJob()
@@ -58,24 +66,24 @@ export function Job() {
                 <Main>
                     <TitleContainer>
                         <Title>Front-End Software Engineer</Title>
-                        {job?.tagCollection.map((tag, key) => (
+                        {job.tagCollection.map((tag, key) => (
                             <Tag key={key}>{tag}</Tag>
                         ))}
                     </TitleContainer>
 
                     <CreatedAt>
                         <WatchIcon />
-                        {job?.createdAt}
+                        {DateUtils.dateDiffInDays(new Date(parseInt(job.createdAt) * 1000), new Date()) + ' Days'}
                     </CreatedAt>
 
                     <About>
-                        <img src={job?.image} />
+                        <img src={job.image} />
 
                         <Description>
-                            <span>{job?.author}</span>
+                            <span>{job.author}</span>
                             <City>
                                 <PlanetIcon />
-                                {job?.city}
+                                {job.city}
                             </City>
                         </Description>
                     </About>

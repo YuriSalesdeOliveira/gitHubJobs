@@ -15,9 +15,9 @@ const basicFetch = async (endpoint: string, method: string) => {
 
 export default {
     getJobs: async () => {
-        return await basicFetch(`/trabalhos?key=${API_KEY}`, 'GET');
+        return await basicFetch(`/trabalhos/${API_KEY}`, 'GET');
     },
-    getJobByIdentity: async (id: number) => {
-        return await basicFetch(`/trabalhos/${id}?key=${API_KEY}`, 'GET');
+    getJobByIdentity: async (identity: string) => {
+        return await basicFetch(`/trabalhos/identity/${identity}/${API_KEY}`, 'GET');
     }
 }

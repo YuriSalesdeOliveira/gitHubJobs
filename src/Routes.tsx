@@ -6,7 +6,7 @@ export function WebRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/tabalho/:id" element={<Job />} />
+            <Route path="/tabalho/:identity" element={<Job />} />
         </Routes>
     );
 }
