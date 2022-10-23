@@ -17,7 +17,7 @@ export default {
     getJobs: async () => {
         return await basicFetch(`/trabalhos?key=${API_KEY}`, 'GET');
     },
-    getJobById: async (id: number) => {
+    getJobByIdentity: async (id: number) => {
         return await basicFetch(`/trabalhos/${id}?key=${API_KEY}`, 'GET');
     }
 }

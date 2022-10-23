@@ -6,7 +6,6 @@ import API from "../../services/API";
 import { About, ArrowLeftIcon, Article, Aside, BackPageButton, City, Container, CreatedAt, Description, Main, PlanetIcon, Tag, Title, TitleContainer, Warning, WatchIcon } from "./style";
 
 type Job = {
-    id: number,
     image: string,
     author: string,
     title: string,
@@ -17,13 +16,13 @@ type Job = {
 
 export function Job() {
 
-    const { id } = useParams<string>();
+    const { identity } = useParams<string>();
     const [job, setJob] = useState<Job>();
 
     useEffect(() => {
         const listJob = async () => {
 
-            const job = await API.getJobById(Number(id));
+            const job = await API.getJobByIdentity(Number(identity));
 
             setJob(job);
         }
