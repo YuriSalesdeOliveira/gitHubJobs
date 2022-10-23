@@ -57,8 +57,16 @@ export const Bottom = styled.div`
     align-items: center;
 `;
 
+export const BottomLeft = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+`;
+
+
 export const Tag = styled.span`
     user-select: none;
+    margin-right: 5px;
     padding: 5px;
     font-weight: 700;
     font-size: 12px;
