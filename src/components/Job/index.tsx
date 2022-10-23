@@ -4,7 +4,7 @@ type JobProps = {
     image: string,
     author: string,
     title: string,
-    tag: string,
+    tagCollection: string[],
     city: string,
     createdAt: string
 }
@@ -18,7 +18,9 @@ export function Job(props: JobProps) {
                 <span>{props.author}</span>
                 <h3>{props.title}</h3>
                 <Bottom>
-                    <Tag>{props.tag}</Tag>
+                    {props.tagCollection.map((tag, key) => (
+                        <Tag key={key}>{tag}</Tag>
+                    ))}
                     <BottomRight>
                         <City>
                             <PlanetIcon />

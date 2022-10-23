@@ -29,7 +29,7 @@ export const ArrowLeftIcon = styled(CgArrowLongLeft)`
     margin-right: 10px;
 `;
 
-export const Warning = styled.p`
+export const Warning = styled.div`
     max-width: 80%;
     font-weight: 500;
     font-size: 14px;

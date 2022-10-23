@@ -1,10 +1,36 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+import API from "../../services/API";
 import { About, ArrowLeftIcon, Article, Aside, BackPageButton, City, Container, CreatedAt, Description, Main, PlanetIcon, Tag, Title, TitleContainer, Warning, WatchIcon } from "./style";
-import jobImage from "../../assets/images/job.webp";
+
+type Job = {
+    id: number,
+    image: string,
+    author: string,
+    title: string,
+    tagCollection: string[],
+    city: string,
+    createdAt: string
+}
 
 export function Job() {
+
+    const { id } = useParams<string>();
+    const [job, setJob] = useState<Job>();
+
+    useEffect(() => {
+        const listJob = async () => {
+
+            const job = await API.getJobById(Number(id));
+
+            setJob(job);
+        }
+
+        listJob()
+    }, []);
+
     return (
         <>
             <Header />
@@ -22,8 +48,10 @@ export function Job() {
                     <Warning>
                         <h3>How to apply</h3>
 
-                        Please email a copy of your resume and online
-                        portfolio to wes@kasisto.com & CC eric@kasisto.com
+                        <p>
+                            Please email a copy of your resume and online
+                            portfolio to wes@kasisto.com & CC eric@kasisto.com
+                        </p>
                     </Warning>
 
                 </Aside>
@@ -31,22 +59,24 @@ export function Job() {
                 <Main>
                     <TitleContainer>
                         <Title>Front-End Software Engineer</Title>
-                        <Tag>Full time</Tag>
+                        {job?.tagCollection.map((tag, key) => (
+                            <Tag key={key}>{tag}</Tag>
+                        ))}
                     </TitleContainer>
 
                     <CreatedAt>
                         <WatchIcon />
-                        5 days ago
+                        {job?.createdAt}
                     </CreatedAt>
 
                     <About>
-                        <img src={jobImage} />
+                        <img src={job?.image} />
 
                         <Description>
-                            <span>Kasisto</span>
+                            <span>{job?.author}</span>
                             <City>
                                 <PlanetIcon />
-                                New York
+                                {job?.city}
                             </City>
                         </Description>
                     </About>

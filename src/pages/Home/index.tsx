@@ -6,10 +6,38 @@ import { Footer } from "../../components/Footer";
 import { Checkbox } from "../../components/Checkbox";
 import { Radio } from "../../components/Radio";
 import { Link } from "react-router-dom";
-import jobImage from "../../assets/images/job.webp";
 import { Job } from "../../components/Job";
+import { useEffect, useState } from "react";
+import API from "../../services/API"
+
+type Job = {
+    identity: number,
+    image: string,
+    author: string,
+    title: string,
+    tagCollection: string[],
+    city: string,
+    createdAt: string
+}
 
 export function Home() {
+
+    const [jobs, setJobs] = useState<Job[]>([]);
+
+    useEffect(() => {
+
+        const listJobs = async () => {
+
+            const jobs = await API.getJobs();
+
+            setJobs(jobs);
+        }
+
+        listJobs()
+
+    }, [])
+
+
     return (
         <>
             <Header>
@@ -48,38 +76,17 @@ export function Home() {
                 </Aside>
 
                 <JobsList>
-                    <Link to="/tabalho/00990">
-                        <Job
-                            image={jobImage}
-                            author="Kasisto"
-                            title="Front-End Software Engineer"
-                            tag="Full time"
-                            city="New York"
-                            createdAt="5 days ago" />
-                    </Link>
-                    <Job
-                        image={jobImage}
-                        author="Kasisto"
-                        title="Front-End Software Engineer"
-                        tag="Full time"
-                        city="New York"
-                        createdAt="5 days ago" />
-
-                    <Job
-                        image={jobImage}
-                        author="Kasisto"
-                        title="Front-End Software Engineer"
-                        tag="Full time"
-                        city="New York"
-                        createdAt="5 days ago" />
-
-                    <Job
-                        image={jobImage}
-                        author="Kasisto"
-                        title="Front-End Software Engineer"
-                        tag="Full time"
-                        city="New York"
-                        createdAt="5 days ago" />
+                    {jobs.map((job, key) => (
+                        <Link key={key} to={`/tabalho/${job.identity}`}>
+                            <Job
+                                image={job.image}
+                                author={job.author}
+                                title={job.title}
+                                tagCollection={job.tagCollection}
+                                city={job.city}
+                                createdAt={job.createdAt} />
+                        </Link>
+                    ))}
                 </JobsList>
 
             </Container>
