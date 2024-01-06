@@ -2,8 +2,6 @@
 
 Este é um projeto em desenvolvimento, originado no [devchallenges](https://devchallenges.io). O desafio correspondente pode ser encontrado [aqui](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps).
 
-## Demonstração
-
 ![GitHub Jobs](https://user-images.githubusercontent.com/54549125/194464910-316347f4-ceb1-453f-9878-39a779a8269a.gif)
 
 ## Descrição
