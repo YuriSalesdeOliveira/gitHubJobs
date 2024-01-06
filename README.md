@@ -1,5 +1,3 @@
-# GitHub Jobs
-
 ## Visão Geral
 
 Este é um projeto em desenvolvimento, originado no [devchallenges](https://devchallenges.io). O desafio correspondente pode ser encontrado [aqui](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps).
